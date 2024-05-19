@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% block content %}
+<div class="container">
+<center> <h1>Adicionar um grupo</h1> </center>
+<div class="container">
+    <div class="jumbotron jumbotron-fluid" >
+      <div class="container">
+        <div>
+            <form action="." method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <center><input type="submit" class="btn btn-primary" value="Cadastrar"></center>
+            </form>
+            
+        </div>
+      </div>
+      <br>
+      <hr/>
+      <center><a  href="{% url 'home' %}" class="btn btn-primary">Voltar</a></center>
+    </div>
+</div>
+{% endblock %}

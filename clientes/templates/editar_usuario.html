@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% block content %}
+<div class="container">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+    <div class="main">
+    <br>
+    <div class='row'>
+    {% for data in dataset %}
+    <div class="col"style="padding: 15px 15px 15px 15px;">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title"> <center><strong><h3>{{data.nome_completo}}</strong></center></h3><br/></h5>
+            <h5><strong>ID: </strong>{{data.id_user}}</h5><br>
+            <h5><strong>Idade:  </strong>{{data.idade}} </h5><br/>
+            <h5><strong>Sexo: </strong>{{data.sexo}}</h5><br/>
+            <h5><strong>Email: </strong>{{data.email}}</h5><br/>
+            <h5><strong>Telefone: </strong>{{data.telefone}}</h5><br/>
+            <h5><strong>País: </strong>{{data.pais}}</h5><br/>
+            <h5><strong>Estado:  </strong>{{data.estado}}</h5><br/>
+            <h5><strong>Cidade: </strong>{{data.cidade}}</h5><br/>
+            <h5><strong>Bairro: </strong>{{data.bairro}}</h5><br/>
+            <h5><strong>Logradouro: </strong>{{data.logradouro}}</h5><br/>
+            <h5><strong>Status: </strong>{{data.status}}<br/></h5><br/>
+            <h5><strong>Grupo: </strong>{{data.grupo.titulo}} </h5><br/>
+            <a  href="{% url 'update_view_user' data.id_user %}" class="btn btn-primary">Editar</a>
+          </div>
+        </div>
+      </div>
+      <br>
+    {% endfor %}
+</div>
+<br>
+<center><a  href="{% url 'home' %}" class="btn btn-primary">Voltar</a></center>
+</div>
+</div>
+{% endblock %}

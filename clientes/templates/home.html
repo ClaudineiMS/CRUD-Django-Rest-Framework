@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% load bootstrap %}
+
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+          <center> <h1 class="display-4">Desafio técnico!</h1> </center> <br>
+     
+
+<h1>GRUPOS</h1>
+    <li>
+    <a href="{% url 'grupos_create' %}" class="btn btn-primary">CADASTRAR</a>
+    <a href="{% url 'grupos_consulta' %}" class="btn btn-primary">CONSULTAR</a>
+    <a href="{% url 'grupos_consulta_edit' %}" class="btn btn-primary" >ALTERAR</a>
+    <a href="{% url 'grupos_consulta_excluir' %}" class="btn btn-primary">EXCLUIR</a><br/>
+    </li>    
+
+<hr/>
+<br>
+<br>
+<h1>USUÁRIOS</h1>
+    <li>
+    <a href="{% url 'usuarios_create' %}" class="btn btn-primary">CADASTRAR</a>
+    <a href="{% url 'usuarios_consulta' %}" class="btn btn-primary">CONSULTAR</a>
+    <a href="{% url 'usuarios_consulta_edit' %}"  class="btn btn-primary">ALTERAR</a>
+    <a href="{% url 'usuarios_consulta_excluir' %}" class="btn btn-primary">EXCLUIR</a>
+    </li>
+<hr/>
+
+</div>
+
+</div>
+</div>
+{% endblock %}
+

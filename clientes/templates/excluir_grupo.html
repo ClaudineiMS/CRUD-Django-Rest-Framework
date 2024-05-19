@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+{% load bootstrap %}
+{% block content %}
+
+<div class="container">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+<div class="main">
+    <br>
+  <div class='row'>
+    {% for data in dataset %}
+    <div class="col"style="padding: 15px 15px 15px 15px;">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title"> <center><h3><strong>{{data.titulo}}</strong></h3></center><br/></h5>
+            <h5><strong>ID: </strong>{{data.id_grupo}}</h5><br>
+            <h5><strong>Descrição: </strong>{{data.descricao}} </h5><br/>
+            <h5><strong>Status: </strong>{{data.status}}</h5><br/>
+            <h5><strong>criação: </strong>{{data.criado}}</h5><br/>
+            <a  href="{% url 'grupo_deletar' data.id_grupo %}" class="btn btn-primary" type="submit">Deletar</a>
+          </div>
+        </div>
+    </div>
+      <br>
+    {% endfor %}
+  </div>
+  <br>
+  <br>
+  <center><a  href="{% url 'home' %}" class="btn btn-primary">Voltar</a></center>
+</div>
+    </div>
+    </dibv>  
+{% endblock %}
