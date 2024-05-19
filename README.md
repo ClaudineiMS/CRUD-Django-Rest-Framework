@@ -25,11 +25,9 @@ Para ativar a maquina virtual python
 
 source venv/bin/activate
 
-# Com a venv ativada: python3 manage.py migrate
-
-# pip install django-bootstrap-form
-
-# Para rodar o server: python3 manage.py runserve
+Com a venv ativada: python3 manage.py migrate
+pip install django-bootstrap-form
+Para rodar o server: python3 manage.py runserve
 
 
 ### Sistema Final
